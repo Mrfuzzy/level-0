@@ -15,14 +15,18 @@ public class animalfarm {
 		 */
 		for (int i = 0; i < 5; i++) {
 
-			String animal = JOptionPane.showInputDialog("what animal sound do dyou wana me to play (options are:cow,duck, and dog)");
-			if (animal.equalsIgnoreCase("cow")) {
+			String animal = JOptionPane.showInputDialog("what animal sound do dyou wana me to play (options are:cow,duck,dog and llama)");
+			if (animal.equalsIgnoreCase("cow")) { 
 				playMoo();
 			} else if (animal.equalsIgnoreCase("duck")) {
 				playQuack();
 			} else if (animal.equalsIgnoreCase("dog")) {
 				playWoof();
-			} else {
+			} 
+			else if (animal.equalsIgnoreCase("llama")) {
+				playLlama();
+			}
+			else {
 				JOptionPane.showMessageDialog(null, "sorry, i dont know that animal's sound :(");
 			}
 		}
@@ -40,6 +44,9 @@ public class animalfarm {
 
 	void playWoof() {
 		playNoise(woofFile);
+	}
+	void playLlama(){
+		playNoise(llamaFile);
 	}
 
 	String quackFile = "/Users/workshop/Google Drive/league-sounds/quack.wav";
